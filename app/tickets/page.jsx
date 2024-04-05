@@ -1,8 +1,12 @@
 import React from 'react'
+import TicketsList from './TicketsList'
 
 const Tickets = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">Tickets Page</div>
+    <div>
+      <h2>Open Tickets</h2>
+      <TicketsList/>
+    </div>
   )
 }
 
