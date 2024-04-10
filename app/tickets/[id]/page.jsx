@@ -15,9 +15,11 @@ export const generateStaticParams = async() => {
 } 
 
 const getData = async (id) => {
-    const response = await fetch(`http://localhost:4000/tickets/${id}`, {next: {
-        revalidate: 30 //use 0 to opt out of cache
-    }})
+    const response = await fetch(`http://localhost:4000/tickets/${id}`, {
+        next: {
+            revalidate: 30 //use 0 to opt out of cache
+         }
+    })
 
     if(!response.ok){
         notFound()
